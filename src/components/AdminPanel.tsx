@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AdminPanelProps extends CurrentUserProps {
+interface AdminPanelProps {
   currentUser: { id: string; name: string; roles: string[] } | null;
   title?: string;
 }

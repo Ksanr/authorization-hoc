@@ -8,7 +8,7 @@ import AccessDenied from '../components/AccessDenied';
  * @param allowedRoles - массив ролей, которым разрешён доступ
  * @returns Новый компонент, который проверяет роли и либо рендерит WrappedComponent, либо AccessDenied
  */
-export function withAuthorization<P extends CurrentUserProps>(
+export function withAuthorization<P extends { currentUser: { roles: string[] } | null }>(
   WrappedComponent: React.ComponentType<P>,
   allowedRoles: string[]
 ) {
